@@ -43,6 +43,9 @@ namespace CarLotSimulator
             car3.HonkNoise = "Beep";
             carLot.ParkingLot.Add(car3);
 
+            CarLot.numberOfCars++;
+            Console.WriteLine("Current number of cars in the car lot: " + CarLot.numberOfCars);
+            Console.WriteLine("Total number of cars in the car lot: " + CarLot.numberOfCars);
             foreach(var car in carLot.ParkingLot)
             {
                 Console.WriteLine($"This is a {car.Make} {car.Model} and the year is {car.Year}.");
