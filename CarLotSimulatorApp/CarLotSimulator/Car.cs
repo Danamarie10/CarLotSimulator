@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CarLotSimulator
 {
-    internal class Car
+    public class Car
     {
         public string Make {get; set;}
         public string Model { get; set;}
@@ -21,6 +21,10 @@ namespace CarLotSimulator
         public void MakeHonkNoise()
         {
             Console.WriteLine($"This {Make} {Model}'s horn sounds like {HonkNoise}");
+        }
+        public Car()
+        {
+            CarLot.numberOfCars++; 
         }
     }
 }
